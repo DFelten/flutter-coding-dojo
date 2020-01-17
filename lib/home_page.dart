@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_coding_dojo/second_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({this.title});
@@ -27,9 +28,22 @@ class _HomePageState extends State<HomePage> {
             RaisedButton(
               child: Text('Press'),
               onPressed: _incrementCounter,
+            ),
+            RaisedButton(
+              child: Text('Second Page'),
+              onPressed: _showSecondPage,
             )
           ],
         ),
+      ),
+    );
+  }
+
+  void _showSecondPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => SecondPage(),
       ),
     );
   }
