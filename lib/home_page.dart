@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_coding_dojo/second_page.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({this.title});
+  HomePage({this.title});
 
   final String title;
+  static const routeName = '/';
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -40,12 +41,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _showSecondPage() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => SecondPage(),
-      ),
-    );
+    Navigator.pushNamed(context, SecondPage.routeName);
   }
 
   void _incrementCounter() {

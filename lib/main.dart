@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_coding_dojo/second_page.dart';
 
 import 'home_page.dart';
 
@@ -12,7 +13,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(title: 'Flutter Coding Dojo'),
+      initialRoute: HomePage.routeName,
+      routes: {
+        HomePage.routeName: (context) => HomePage(title: 'Flutter Coding Dojo'),
+        SecondPage.routeName: (context) => SecondPage(),
+      },
     );
   }
 }
