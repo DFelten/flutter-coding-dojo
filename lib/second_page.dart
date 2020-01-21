@@ -8,7 +8,18 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Second Page")),
-      body: Text('Second Page Body'),
+      body: ListView(
+        children: <Widget>[
+          ListTile(
+            leading: Icon(Icons.map),
+            title: Text('Map'),
+          ),
+          ListTile(
+            leading: Icon(Icons.event),
+            title: Text('Event'),
+          ),
+        ],
+      ),
     );
   }
 }
