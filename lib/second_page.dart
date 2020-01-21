@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_coding_dojo/models/item.dart';
 
 class SecondPage extends StatelessWidget {
   static const routeName = '/second';
@@ -24,9 +25,3 @@ class SecondPage extends StatelessWidget {
   }
 }
 
-class Item {
-  Item({this.text, this.icon});
-
-  final String text;
-  final IconData icon;
-}
